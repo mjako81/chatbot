@@ -1,12 +1,10 @@
 package com.mjako18.chatbot.service;
 
-import opennlp.tools.util.StringUtil;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Used with RAG to define methods for the GPT to find information
+ * Used to define methods for the GPT to find information
  */
 public class ChatbotService {
     public ChatbotService() {}

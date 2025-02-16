@@ -24,7 +24,7 @@ import org.springframework.core.io.ResourceLoader;
 import java.io.IOException;
 
 @Configuration
-public class Config {
+public class ChatbotConfig {
     @Bean
     ChatbotServiceAgent chatbotServiceAgent(StreamingChatLanguageModel streamingChatLanguageModel,
                                             ChatLanguageModel chatLanguageModel,

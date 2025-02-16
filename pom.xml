@@ -32,10 +32,7 @@
 		<jlama.version>0.8.3</jlama.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -63,6 +60,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-core</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>com.github.tjake</groupId>
@@ -157,6 +158,58 @@
 					<release>${java.version}</release>
 					<enablePreview>true</enablePreview>
 				</configuration>
+				<executions>
+					<execution>
+						<id>functions</id>
+						<configuration>
+							<arguments>
+								<argument>-classpath</argument>
+								<classpath/>
+								<argument>--add-modules=jdk.incubator.vector</argument>
+								<argument>--enable-native-access=ALL-UNNAMED</argument>
+								<argument>JlamaAiFunctionCallingExamples$Payment_Data_From_AiServices</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>rag</id>
+						<configuration>
+							<arguments>
+								<argument>-classpath</argument>
+								<classpath/>
+								<argument>--add-modules=jdk.incubator.vector</argument>
+								<argument>--enable-native-access=ALL-UNNAMED</argument>
+								<argument>JlamaBasicRagEmbedExamples$Chat_Story_From_My_Document</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>stream</id>
+						<configuration>
+							<arguments>
+								<argument>-classpath</argument>
+								<classpath/>
+								<argument>--add-modules=jdk.incubator.vector</argument>
+								<argument>--enable-native-access=ALL-UNNAMED</argument>
+								<argument>--enable-preview</argument>
+								<argument>JlamaStreamingChatModelExamples$Simple_Streaming_Prompt</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>chat</id>
+						<configuration>
+							<arguments>
+								<argument>-classpath</argument>
+								<classpath/>
+								<argument>--add-modules=jdk.incubator.vector</argument>
+								<argument>--enable-native-access=ALL-UNNAMED</argument>
+								<argument>--enable-preview</argument>
+								<argument>JlamaChatModelExamples$Simple_Prompt</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 			<plugin>

@@ -1,7 +1,7 @@
 # chatbot
 You need this as well as the UI project found here:
 
-https://github.com/mjako81/chatbot-ui
+[https://github.com/mjako81/chatbot-app](https://github.com/mjako81/chatbot-app)
 
 Requirements:
 
