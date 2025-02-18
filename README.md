@@ -23,3 +23,22 @@ Then navigate to the UI projects root folder and run this command:
 npm run dev
 ```
 This will start a server running on localhost:3000. Navigate here to use the UI to talk with the chatbot.
+
+Alternatively it is possible to use docker to run both projects.
+To run this project you need to first use:
+```shell
+docker build -t TAG
+```
+then
+```shell
+docker run -p 8080:8080 TAG
+```
+This will start a server listening on localhost:8080
+
+Remember to add you own name where is says TAG.
+
+The UI project can be run with:
+```shell
+docker compose up
+```
+This will start a server running on localhost:3000. Navigate here to use the UI to talk with the chatbot.

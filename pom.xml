@@ -107,7 +107,7 @@
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
-			<version>1.0.0-alpha2-SNAPSHOT</version>
+			<version>1.0.0-beta1</version>
 		</dependency>
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
